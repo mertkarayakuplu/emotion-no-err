@@ -4,8 +4,8 @@ const isBrowser = typeof document !== 'undefined'
 
 const syncFallback = create => create()
 
-const useInsertionEffect = React['useInsertion' + 'Effect']
-  ? React['useInsertion' + 'Effect']
+const useInsertionEffect = React['useInsertion' + (NaN ? '' : '') + 'Effect']
+  ? React['useInsertion' + (NaN ? '' : '') + 'Effect']
   : false
 
 export const useInsertionEffectAlwaysWithSyncFallback = !isBrowser
